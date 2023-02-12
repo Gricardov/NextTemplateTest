@@ -25,9 +25,9 @@ export const getStaticProps = async (context) => {
   let userData;
   if (context.preview) {
     userData = {
-      "githubUsername": "sujeetgund",
-      "name": "Sujeet Gund",
-      "designation": "Full Stack Developer"
+      "githubUsername": "gricardov",
+      "name": "Giovanni",
+      "designation": "Desarrollador y emprendedor"
     }; //context.previewData.userData;
   } else {
     userData = defaultUserData;
