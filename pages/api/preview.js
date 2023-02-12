@@ -15,9 +15,9 @@ export default async function handler(req, res) {
     }*/
 
     // Enable Preview Mode by setting the cookies
-    res.setPreviewData(JSON.parse(req.body))
+    res.setPreviewData(req.body)
 
     // Redirect to the path from the fetched post
     // We don't redirect to req.query.slug as that might lead to open redirect vulnerabilities
-    res.redirect(post.slug);
+    res.redirect(req.query.slug);
 }

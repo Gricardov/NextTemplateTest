@@ -24,7 +24,11 @@ export const getStaticProps = async (context) => {
   let token = process.env.GITHUB_AUTH_TOKEN;
   let userData;
   if (context.preview) {
-    userData = context.previewData.userData;
+    userData = {
+      "githubUsername": "sujeetgund",
+      "name": "Sujeet Gund",
+      "designation": "Full Stack Developer"
+    }; //context.previewData.userData;
   } else {
     userData = defaultUserData;
   }
