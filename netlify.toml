@@ -5,5 +5,4 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "ALLOW"
     Access-Control-Allow-Origin = "*"
