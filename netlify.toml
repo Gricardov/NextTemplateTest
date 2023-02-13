@@ -1,5 +1,5 @@
 [[headers]]
   for = "/*"
     [headers.values]
-      Content-Security-Policy = "frame-ancestors 'self' localhost:*; default-src 'localhost:*'"
+      Content-Security-Policy = "default-src 'localhost:*'"
       Access-Control-Allow-Origin = "*"
