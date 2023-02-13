@@ -1,3 +1,7 @@
+[[redirects]]
+  from = "/*"
+  to = "/api/preview"
+  status = 200
 [[headers]]
   for = "/*"
   [headers.values]
