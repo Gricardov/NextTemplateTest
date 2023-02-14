@@ -1,7 +1,7 @@
 import React from "react";
-import userData from "@constants/data";
+//import userData from "@constants/data";
 
-export default function AboutMe() {
+export default function AboutMe({userData}) {
   return (
     <section className="bg-white dark:bg-gray-800">
       <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800">

@@ -11,8 +11,7 @@ export default function Home({ userData, repositories }) {
   return (
     <ContainerBlock
       title={userData.githubUsername}
-      description={userData.designation}
-    >
+      description={userData.designation}>
       <Hero />
       <FavouriteProjects />
       <LatestCode repositories={repositories} />
@@ -24,11 +23,7 @@ export const getStaticProps = async (context) => {
   let token = process.env.GITHUB_AUTH_TOKEN;
   let userData;
   if (context.preview) {
-    userData = {
-      "githubUsername": "gricardov",
-      "name": "Giovanni",
-      "designation": "Desarrollador y emprendedor"
-    }; //context.previewData.userData;
+    userData = context.previewData.userData;
   } else {
     userData = defaultUserData;
   }

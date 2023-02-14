@@ -1,3 +1,10 @@
+/*const setCookieSameSite = (res, value) => {
+    //const cookies = res.getHeader('Set-Cookie');
+    //res.setHeader('Set-Cookie', cookies?.map((cookie) => cookie.replace("SameSite=Lax", `SameSite=${value};Secure`)), { httpOnly: false });
+    //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3007');
+    //res.setHeader('Access-Control-Allow-Credentials', 'true');
+}*/
+
 export default async function handler(req, res) {
     // Check the secret and next parameters
     // This secret should only be known to this API route and the CMS
@@ -13,11 +20,13 @@ export default async function handler(req, res) {
     if (!post) {
         return res.status(401).json({ message: 'Invalid slug' })
     }*/
-
+    console.log('req', req)
     // Enable Preview Mode by setting the cookies
-    res.setPreviewData(req.body)
+    res.setPreviewData(JSON.parse(req.body))
+    //setCookieSameSite(res, "None");
 
     // Redirect to the path from the fetched post
     // We don't redirect to req.query.slug as that might lead to open redirect vulnerabilities
+    //res.json({ path: req.query.slug });
     res.redirect(req.query.slug);
 }
